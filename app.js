@@ -7,7 +7,7 @@ Recognition.onstart=function(){
 };
 
 const greetings=['Doing good you little piece of love','I am good','Alhamdulillah'];
-const madiha=['I like madiha','Madiha is fool','Madiha is studying maths'];
+
 Recognition.onresult=function(e){
     const current= e.resultIndex;
     const transcript=e.results[current][0].transcript;
@@ -24,10 +24,6 @@ function readoutLoud(message){
     speech.text='I dont know what are you saying, please repeat!';
 
     if(message.includes('how are you')){
-        const finalmessage= greetings[Math.floor(Math.random()* greetings.length)];
-        speech.text=finalmessage;
-    } 
-    if(message.includes('Who is madiha')){
         const finalmessage= greetings[Math.floor(Math.random()* greetings.length)];
         speech.text=finalmessage;
     } 
