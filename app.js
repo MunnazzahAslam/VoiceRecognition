@@ -21,7 +21,7 @@ button.addEventListener('click',()=>{
 
 function readoutLoud(message){
     const speech=new SpeechSynthesisUtterance();
-    speech.text='I dont know what are you saying, please repeat!';
+    speech.text='Sorry I dont know the answer, try asking something else!';
 
     if(message.includes('how are you')){
         const finalmessage= greetings[Math.floor(Math.random()* greetings.length)];
